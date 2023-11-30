@@ -43,7 +43,7 @@ form .display input {
   font-size: 3.5em;
   box-shadow: none;
 }
-form .lastone {
+form .lastOne {
   display: flex;
 }
 form input.equal {

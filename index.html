@@ -11,94 +11,116 @@
       <div class="calculator">
         <form>
           <div class="display">
-            <input type="text" name="display" readonly />
+            <input type="text" id="display" readonly />
           </div>
           <div>
-            <input type="button" value="AC" onclick="display.value=''" />
+            <input
+              type="button"
+              value="AC"
+              name="AC"
+              onclick="clearDisplay()" />
             <input
               type="button"
               value="DE"
-              onclick="display.value = display.value.toString().slice(0,-1)" />
+              name="DE"
+              onclick="deleteLastChar()" />
             <input
               type="button"
-              value="."
-              onclick="display.value+=this.value" />
+              value=","
+              name="."
+              onclick="appendValue(this.value, this.name) " />
             <input
               type="button"
-              value="/"
-              onclick="display.value+=this.value" />
+              value="÷"
+              name="/"
+              onclick="appendValue(this.value, this.name)" />
           </div>
           <div>
             <input
               type="button"
               value="7"
-              onclick="display.value+=this.value" />
+              name="7"
+              onclick="appendValue(this.value, this.name);ClearAfterEqual()" />
             <input
               type="button"
               value="8"
-              onclick="display.value+=this.value" />
+              name="8"
+              onclick="appendValue(this.value, this.name);ClearAfterEqual(this.value,this.name)" />
             <input
               type="button"
               value="9"
-              onclick="display.value+=this.value" />
+              name="9"
+              onclick="appendValue(this.value, this.name);ClearAfterEqual()" />
             <input
               type="button"
-              value="*"
-              onclick="display.value+=this.value" />
+              value="x"
+              name="*"
+              onclick="appendValue(this.value, this.name)" />
           </div>
           <div>
             <input
               type="button"
               value="6"
-              onclick="display.value+=this.value" />
+              name="6"
+              onclick="appendValue(this.value, this.name);ClearAfterEqual()" />
             <input
               type="button"
               value="5"
-              onclick="display.value+=this.value" />
+              name="5"
+              onclick="appendValue(this.value, this.name);ClearAfterEqual()" />
             <input
               type="button"
               value="4"
-              onclick="display.value+=this.value" />
+              name="4"
+              onclick="appendValue(this.value, this.name);ClearAfterEqual()" />
             <input
               type="button"
               value="-"
-              onclick="display.value+=this.value" />
+              name="-"
+              onclick="appendValue(this.value, this.name)" />
           </div>
           <div>
             <input
               type="button"
               value="3"
-              onclick="display.value+=this.value" />
+              name="3"
+              onclick="appendValue(this.value, this.name);ClearAfterEqual()" />
             <input
               type="button"
               value="2"
-              onclick="display.value+=this.value" />
+              name="2"
+              onclick="appendValue(this.value, this.name);ClearAfterEqual()" />
             <input
               type="button"
               value="1"
-              onclick="display.value+=this.value" />
+              name="1"
+              onclick="appendValue(this.value, this.name);ClearAfterEqual()" />
             <input
               type="button"
               value="+"
-              onclick="display.value+=this.value" />
+              name="+"
+              onclick="appendValue(this.value, this.name)" />
           </div>
-          <div class="lastone">
+          <div class="lastOne">
             <input
               type="button"
               value="00"
-              onclick="display.value+=this.value" />
+              name="00"
+              onclick="appendValue(this.value, this.name);ClearAfterEqual()" />
             <input
               type="button"
               value="0"
-              onclick="display.value+=this.value" />
+              name="0"
+              onclick="appendValue(this.value, this.name);ClearAfterEqual()" />
             <input
               type="button"
               value="="
               class="equal"
-              onclick="display.value=eval(display.value)" />
+              onclick="calculateResult()" />
           </div>
         </form>
       </div>
     </div>
+    <script src="index.js"></script>
   </body>
 </html>
