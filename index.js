@@ -41,5 +41,6 @@ function calculateResult() {
   }
 
   display.value = eval(display.name);
-  equalPressed = true;
+  display.name = eval(display.name);
+  equalPressed = true; // Set the flag to true
 }
