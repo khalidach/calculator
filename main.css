@@ -53,6 +53,9 @@ form input.equal {
   * {
     overflow-x: hidden;
   }
+  body {
+    touch-action: none;
+  }
   form .display {
     margin: 10px 0;
   }
